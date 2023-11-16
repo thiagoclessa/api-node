@@ -65,9 +65,5 @@ spec:
           externalDocs:
             description: Find out more
             url: http://swagger.io
-    paths: 
-      	/:
-	    get:
-	      summary: Health Check Status
-	      description: Real-time system status check.
+    paths: {}
     components: {}
