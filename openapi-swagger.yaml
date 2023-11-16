@@ -1,0 +1,31 @@
+openapi: 3.0.2
+info:
+  version: 1.0.17
+  title: Health Check API - OpenAPI 3.0
+  description: Check system status with essential real-time metrics.
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: veecode-platform
+    description: Made 
+    externalDocs:
+      description: made with Devportal
+      url: 'http://localhost:5000'
+
+# Definition of API paths/endpoints
+paths:
+  /:
+    get:
+      summary: Health Check Status
+      description: Real-time system status check.
+
+# Reusable components (schemas, security, etc.)
+components:
+  schemas:
+  securitySchemes:
+    apistore_auth:
+    api_key:
