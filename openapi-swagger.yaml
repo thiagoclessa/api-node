@@ -30,23 +30,44 @@
 #     apistore_auth:
 #     api_key:
 
-swagger: "2.0"
-info:
-  version: 1.0.0
-  title: Health Check API - OpenAPI 3.0
-  license:
-    name: MIT
-host: http://localhost:5000
-basePath: /v1
-schemes:
-  - http
-consumes:
-  - application/json
-produces:
-  - application/json
-paths:
-  /:
-    get:
-      summary: Health Check Status
-      description: Real-time system status check.
-definitions: {}
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-health-check
+  title: api-health-check
+  publishedAt: "2023-09-26 12:13:35"
+  description: 'Check system status with essential real-time metrics.'
+  tags:
+    - api
+    - node
+    - platform
+spec:
+  type: openapi
+  lifecycle: production
+  owner: admin
+  definition: |-
+    openapi: 3.0.2
+    info:
+        description: 'Check system status with essential real-time metrics.'
+        version: 1.0.2
+        title: api-health-check
+        termsOfService: http://swagger.io/terms/
+        contact:
+            email: apiteam@swagger.io
+        license:
+            name: Apache 2.0
+            url: http://www.apache.org/licenses/LICENSE-2.0.html
+    servers:
+        - url: https://localhost:5000
+    tags:
+        - name: spec
+          description: Health
+          externalDocs:
+            description: Find out more
+            url: http://swagger.io
+    paths: 
+      	/:
+	    get:
+	      summary: Health Check Status
+	      description: Real-time system status check.
+    components: {}
